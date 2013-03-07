@@ -1,16 +1,81 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout
+	android:id="@+id/widget0"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+<RelativeLayout
+    android:id="@+id/TopBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="45px"
+    android:layout_x="0dp"
+    android:layout_y="0dp"
+    android:background="#ff003333" >
 
+    <LinearLayout
+        android:id="@+id/LinearBtAdd"
+        android:layout_width="45px"
+        android:layout_height="40px"
+        android:layout_marginRight="1dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="#ff000033"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/AddCustomFood"
+            android:layout_width="45px"
+            android:layout_height="40px"
+            android:src="@drawable/add_green_plus" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearBtSearch"
+        android:layout_width="8px"
+        android:layout_height="40px"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="50dp"
+        android:layout_toLeftOf="@+id/LinearBtAdd"
+        android:background="#ff000000"
+        android:onClick="addCustomFood"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearBtSearch"
+        android:layout_width="45px"
+        android:layout_height="40px"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="36dp"
+        android:layout_toLeftOf="@+id/LinearBtAdd"
+        android:background="#ff000033"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/Search"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:src="@drawable/lupa" />
+    </LinearLayout>
 </RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/MiddleContent"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_x="0dp"
+    android:layout_y="30dp"
+    android:background="#ff004444" >
+	<ListView
+    	android:id="@+id/Recent"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:layout_x="2dp"
+    	android:layout_y="32dp" >
+	</ListView>
+</RelativeLayout>
+    
+</AbsoluteLayout>
