@@ -4,9 +4,12 @@ import java.util.List;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 
 public class MainActivity extends Activity {
@@ -32,7 +35,38 @@ public class MainActivity extends Activity {
 	}
 	
 	public void addCustomFood(View v){
+		setContentView(R.layout.add_prescription);	
+	}	
+	
+	public void addSomeIngredient(View v){
+		AlertDialog.Builder alert = new AlertDialog.Builder(this);
+		alert.setTitle("New Ingredient");
+		alert.setMessage("Select the new ingredient");
 		
+		final EditText input = new EditText(this);
+		alert.setView(input);
+		
+		alert.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int whichButton) {
+				// TODO Auto-generated method stub
+				String value = input.getText().toString();				
+			}
+		});
+		
+		
+		alert.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				// TODO Auto-generated method stub
+				return;
+			}
+		});
+		
+		
+		alert.show();
 	}
 
 }

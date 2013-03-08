@@ -27,7 +27,8 @@
             android:id="@+id/AddCustomFood"
             android:layout_width="45px"
             android:layout_height="40px"
-            android:src="@drawable/add_green_plus" />
+            android:src="@drawable/add_green_plus"
+            android:onClick="addCustomFood" />
     </LinearLayout>
 
     <LinearLayout

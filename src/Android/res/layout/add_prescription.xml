@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout
+	android:id="@+id/widget0"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+<TextView
+	android:id="@+id/TxtPrescriptionName"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="Name"
+	android:layout_x="3dp"
+	android:layout_y="5dp" />
+
+<ImageButton
+    android:id="@+id/AddIngredient"
+    android:layout_width="40px"
+    android:layout_height="40px"
+    android:layout_x="6dp"
+    android:layout_y="72dp"
+    android:src="@drawable/add_green_plus"
+    android:onClick="addSomeIngredient" />
+
+<EditText
+    android:id="@+id/editText1"
+    android:layout_width="292dp"
+    android:layout_height="wrap_content"
+    android:layout_x="4dp"
+    android:layout_y="25dp"
+    android:ems="10" >
+
+    <requestFocus />
+</EditText>
+
+</AbsoluteLayout>
